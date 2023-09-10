@@ -399,6 +399,13 @@ i:not(.fas):not(.fa-circle) {
   padding: 24px;
   border: 10px solid #9558b2;
   border-radius: 10px;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Menu */
@@ -571,11 +578,23 @@ dl dl dt::marker {
 }
 
 .no-after:after {
-  content: "" !important;
+  content: none !important;
 }
 
 .column:after {
   content: ":" !important;
+}
+
+.semicolumn:after {
+  content: ";" !important;
+}
+
+.questionmark:after {
+  content: "?" !important;
+}
+
+.period:after {
+  content: "." !important;
 }
 
 /* Code */
@@ -628,10 +647,91 @@ p code, pre code.hljs {
   #logo {
     display: none;
   }
+
   #qrcode {
     width: 50px;
     height: 50px;
     top: 25px;
     right: 25px;
   }
+}
+.tree {
+  --branch-color: #e65100;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.tree li::marker {
+  content: none;
+}
+
+.tree ul {
+  position: relative;
+  padding-top: 20px;
+}
+
+.tree li {
+  list-style-type: none;
+  float: left;
+  text-align: center;
+  position: relative;
+  padding: 20px 5px 0 5px;
+}
+
+.tree li::before, .tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 50%;
+  height: 20px;
+  border-top: 5px solid var(--branch-color);
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 5px solid var(--branch-color);
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 5px solid var(--branch-color);
+  border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul {
+  margin: 0;
+}
+
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 20px;
+  border-left: 5px solid var(--branch-color);
+}
+
+.tree li .vertex {
+  padding: 5px 10px;
+  display: inline-block;
 }

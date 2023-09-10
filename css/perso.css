@@ -43,6 +43,15 @@ i:not(.fas):not(.fa-circle) {
 
     border: 10px solid #9558b2;
     border-radius: 10px;
+
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Menu */
@@ -231,11 +240,23 @@ dl dl dt::marker {
 }
 
 .no-after:after {
-    content: "" !important;
+    content: none !important;
 }
 
 .column:after {
     content: ":" !important;
+}
+
+.semicolumn:after {
+    content: ";" !important;
+}
+
+.questionmark:after {
+    content: "?" !important;
+}
+
+.period:after {
+    content: "." !important;
 }
 
 /* Code */

@@ -7,8 +7,9 @@
 }
 
 em {
+    color: #9558b2;
     font-style: normal !important;
-    text-decoration: underline #9558b2 dashed 5px;
+    /* text-decoration: underline #9558b2 dashed 5px; */
 }
 
 i:not(.fas):not(.fa-circle) {
@@ -165,7 +166,11 @@ a:hover {
 /* Lists */
 ul, ol, dl {
     padding-left: 1em;
-    line-height: 3ex;
+    line-height: 2ex;
+}
+
+li {
+  margin: 1.25ex 0;
 }
 
 ul li::marker, ol li::marker, dl dt::marker {

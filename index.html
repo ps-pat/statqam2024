@@ -4,75 +4,432 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>My Presentation</title>
+    <title>Génétique&#9889;</title>
 
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
     <link rel="stylesheet" href="dist/theme/mytheme.css" id="theme">
+
+    <style>
+      #cover-subtitle {
+          font-size: 65%;
+      }
+
+      /* Two columns layout */
+      .cols {
+          display: flex;
+          align-items: center;
+      }
+
+      .col2 {
+          flex: 50%;
+      }
+
+      .col3 {
+          flex: 33%;
+      }
+    </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section class="cover">
-          <h1>Title of the presentation</h1>
-          <h2>Author</h2>
-          <h3>Event</h3>
-          <h3>Date</h3>
+          <h1>Impédance génétique <br><span id="cover-subtitle">Votre famille comme un circuit électrique&#9889;&#9889;</span></h1>
+          <h2>Patrick Fournier</h2>
+          <h3>Journé de la recherche STATQAM 2024</h3>
+          <h3>29 mai 2024</h3>
         </section>
         <section>
-          <section class="title-slide">
-            <h1>Theme of the next vertical slides</h1>
-            <h2>Why not have a subtitle too?</h2>
+          <section>
+            <h1>Avertissement/garantie</h1>
+            <ul>
+              <li><em>Pas</em> question d'implémentation: désolé/bienvenu</li>
+              <li>\( \searrow \) génétique, \( \nearrow \) graphes</li>
+              <li>&#171;Famille&#187;: échelle \( \sim \) 1000 générations</li>
+              <li>Histoire évolutive supposée connue</li>
+              <ul>
+                <li class="semicolumn">En pratique, doit être estimée ou intégrée</li>
+              </ul>
+              <li>Individus <em>haploïdes</em>; humains diploïdes = 2-haploïdes</li>
+            </ul>
           </section>
           <section>
-            <h1>Title of the slide</h1>
-            Some content in the form of an ordered list:
-            <ol>
-              <li>First very important point</li>
-              <li>Second less important point</li>
-            </ol>
+            <div class="r-stack">
+              <div class="fragment semi-fade-out" data-fragment-index="2">
+                <h1>Le rêve &#x1F332;</h1>
+            <div class="cols">
+              <div class="col2">
+                <ul>
+                  <li>Évolution des relations interindividuelles</li>
+                  <li>Topologie reflète matériel génétique</li>
+                  <li>Arbre binaire plein</li>
+                  <li>Trajectoire d'un processus stochastique<span class="reference">1</span></li>
+                </ul>
+              </div>
+              <div class="col2">
+                <img src="assets/plaintree.svg"
+                     alt="Genealogy as full binary tree"
+                     style="display:block; margin:auto; height: 500px;"/>
+              </div>
+            </div>
+              </div>
+
+              <div class="fragment fade-in obox" data-fragment-index="2">
+                <h2>Arbre</h2>
+                Graphe \( G = (V, E) \) t.q. pour toute paire \({ v_1, v_2 \in V }\),
+                il existe <em>un et un seul chemin</em> entre \( v_1 \) et \( v_2 \).
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="r-stack">
+              <div class="fragment semi-fade-out" data-fragment-index="2">
+                <h1>Distance génétique</h1>
+                <div class="cols">
+                  <div class="col2">
+                    <ul>
+                      <li>Définition naturelle sur un arbre</li>
+                      <li><em>mrca(\(u, v\))</em>: ancêtre commun le plus récent</li>
+                      <li><em>tmrca(\(u, v\))</em>: temps jusqu'au mrca</li>
+                      <li><em>Feuille</em>: sommet de degré 1</li>
+                    </ul>
+                  </div>
+                  <div class="col2">
+                    <img src="assets/treedist.svg"
+                         alt="Latitudes on a tree"
+                         style="display:block; margin:auto; height: 500px;"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fragment fade-in obox" data-fragment-index="2">
+                <h2>Distance</h2>
+                Pour deux haplotypes \( \eta_1 \) et \( \eta_2 \) associés aux feuilles \( v_1 \) et \( v_2 \),
+                $$\begin{equation*}
+                d(\eta_1, \eta_2) = d(v_1, v_2) = 2 \operatorname{tmrca}(v_1, v_2)
+                \end{equation*}$$
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="r-stack">
+              <div class="fragment semi-fade-out" data-fragment-index="2">
+                <h1>Application: fonction \( \alpha \)</h1>
+                \( \alpha: \mathbb R_+ \to [0, 1] \) croissante (\( \approx \) restriction cdf).
+
+                <ul>
+                  <li>Associer <em>phénotype</em> \( \varphi_k \) à certaines feuille \( v_k \)</li>
+                  <li>Spécifier densité jointe \( f \left( \varphi_i, \varphi_j | \alpha(d(v_i, v_j)) \right) \)</li>
+                  <li>Supposer propriétés markovienne sur \( G \)</li>
+                  <li>\( \Rightarrow \) Distribution conjointe, densité marginale &#171;prédictive&#187;, etc</li>
+                </ul>
+              </div>
+
+              <div class="fragment fade-in obox" data-fragment-index="2" style="height: 75vh">
+                <h2>Exemple: \( \alpha \) estimés</h2>
+                <img src="assets/alphas.svg"
+                     alt="Numerical examples of alpha functions."
+                     style="display:block; margin:auto; height: 80%"/>
+              </div>
+            </div>
           </section>
         </section>
+
         <section>
-          <h1>Code</h1>
-          <p>Are you ready for some awesome <code class="julia">content = "code"</code>?</p>
-          <pre><code class="language-julia hljs" data-trim data-noescape>
-              test = 41 + 1
-              function ret42(x::Int)
-                  ret = 42 - x
-                  ret + x
-              end
-          </code></pre>
+          <section>
+            <h1>Problème &#x1F332;&#x1F61F;</h1>
+            Complications <em>computationnelles</em> et <em>conceptuelles</em>:
+            <ul>
+              <li>1 arbre / molécule d'ADN</li>
+              <ul>
+                <li>\( 3.1 \times 10^9 \) histoires différentes</li>
+                <li class="semicolumn">Arbres corrélés</li>
+              </ul>
+              <li>Phénotype: propriété d'un <em>individu</em>, pas d'une molécule</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Graphe de recombinaison ancestral</h1>
+            <div class="cols">
+              <div class="col2" style="margin-top: -1em;">
+                <ul>
+                  <li>Union d'arbres \( \Leftrightarrow \) graphe</li>
+                  <li>Règle le problème conceptuel</li>
+                  <li class="column">Distance</li>
+                  <ul>
+                    <li>Min? Max? Moyenne?</li>
+                    <li>???</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="col2" style="margin-top: -3em;">
+                <img src="assets/arg.svg"
+                     alt="Ancestral recombination graph."
+                     style="display:block; margin:auto; height: 500px"/>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="r-stack">
+              <div class="fragment semi-fade-out" data-fragment-index="2">
+                <h1>Graphe série-parallèle</h1>
+                <div class="cols">
+                  <div class="col2">
+                    <ul>
+                      <li>Claude Shannon: SP \( \Leftrightarrow \) calcul des propositions<span class="reference">2</span></li>
+                      <li>Richard Duffin: Théorie des graphes<span class="reference">3</span> & algèbre<span class="reference">4</span> (avec R. Bott)</li>
+                      <li>N.M. Korneyenko: Graphes SP généralisés<span class="reference">5</span></li>
+                    </ul>
+                  </div>
+                  <div class="col2" style="flex: 10%;">
+                    <div style="display: flex; flex-direction: column;">
+                      <img src="assets/shannon.jpg" alt="Claude E. Shannon" width="200px" style="border-radius: 50px;"/>
+                      <img src="assets/duffin.webp" alt="Richard Duffin" width="200px"/ style="border-radius: 50px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fragment fade-in-then-out obox" data-fragment-index="2" style="height: 75vh">
+                 <h2>Opérations de base</h2>
+                <img src="assets/sp_basic.svg"
+                     alt="S/P operations."
+                     style="display:block; margin:auto; height: 80%"/>
+              </div>
+
+              <div class="fragment fade-in-then-out obox" data-fragment-index="3" style="height: 75vh">
+                <h2>Composition</h2>
+                <img src="assets/sp_comp.svg"
+                     alt="Moar SP"
+                     style="display:block; margin:auto; height: 80%"/>
+              </div>
+
+              <div class="fragment fade-in-then-out obox" data-fragment-index="4" style="height: 75vh">
+                <h2>GSP: fusion-source</h2>
+                <img src="assets/sp_gen.svg"
+                     alt="Source fusion."
+                     style="display:block; margin:auto; height: 80%"/>
+              </div>
+
+            </div>
+          </section>
+
+          <section>
+            <div style="display: flex; flex-direction: column; row-gap: 3em;">
+              <div>
+                <h1>Proposition (ARG \( \Leftrightarrow \) GSP)</h1>
+                <i>Tout graphe de recombinaison ancestral est un graphe série-parallèle généralisé.</i>
+              </div>
+              <div class="cols" style="font-size: 75%; text-align: center">
+                <div class="col2">
+                  Coalescence \( \Leftrightarrow \) fusion-source
+                  <img src="assets/sp_gen.svg"
+                       alt="Coalescence as gsp."
+                       style="display:block; margin:auto; height: 100%"/>
+                </div>
+                <div class="col2">
+                  Recombinaison \( \Leftrightarrow \) comps. s/p
+                  <img src="assets/sp_rec.svg"
+                       alt="Recombination as gsp."
+                       style="display:block; margin:auto; height: 100%"/>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>Composantes biconnectées</h1>
+            <div class="cols">
+              <div class="col2">
+                <ul>
+                  <li>Sous-graphe biconnecté maximal</li>
+                   <li><em>Biconnecté</em>: enlever 1 sommet n'augmente pas \( \# \) composantes (= 1)</li>
+                </ul>
+              </div>
+              <div class="col2">
+                <img src="assets/biconnected.svg"
+                     alt="Biconnected components of an ARG."
+                     style="display:block; margin:auto; height: 500px;"/>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>Lemme (GSP \( \Leftrightarrow \) bloc SP)</h1>
+            [Wimer & Hedetniemi ???]<span class="reference">6</span> <i>Un graphe est GSP si et seulement si tous ses <em>blocs</em> sont SP.</i>
+            <ul>
+              <li>\( \bigcup \) chemins entre 2 sommets d'un ARG est un graphe SP &#x1F60D;</li>
+              <li>Analyse de circuits &#9989;</li>
+            </ul>
+          </section>
         </section>
+
         <section>
-          Slide 2<br>
-          <a href="https://www.perdu.com">This is a link</a>
-        </section>
-        <section>
-          <h1>Title of the slide</h1>
-          <p>Sample unordered list:</p>
-          <ul>
-            <li>First item</li>
-            <li>Second item</li>
-          </ul>
-        </section>
-        <section>
-          <p>This integral is not as easy as \( 2 + \frac 4 2 = 4 \) &#x1F614;</p>
-          $$\begin{equation*}
-          \int_{-\infty}^{\infty} e^{\frac{-x^2}{2}} \text d x
-          \end{equation*}$$
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-            ## Slide 1
-            A paragraph with some text and a [link](http://hakim.se).
-            ---
-            ## Slide 2
-            A reference<span class="reference">1</span>
-            ---
-            ## Slide 3
-            Another reference<span class="reference">3</span>
-          </textarea>
+          <section>
+            <h1>Impédance</h1>
+            <div class="cols">
+              <div class="col2">
+                <ul>
+                  <li>Terme inventé par Oliver Heaviside (juillet 1886)</li>
+                  <li>Électricité: généralise <em>résistance</em> (\( r \)) au AC</li>
+                  <li>En général, opposition d'un système à une excitation</li>
+                  <li>\( z \in \mathbb C \), <em>\( \Re(z) = r \)</em>, \( \Im(z) = \) réactance</li>
+                </ul>
+
+              </div>
+              <div class="col2" style="flex: 20%;">
+                <img src="assets/heaviside.jpg"
+                     alt="Oliver Heaviside"
+                     style="display:block; margin:auto; max-height: 75%; border-radius: 50px;"/>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>Impédance... génétique?</h1>
+            <ul>
+              <li><b>Feuille</b>: propage phénotype aux autres feuilles</li>
+              <li><b>Généalogie</b>: résiste à la propagation</li>
+              <li>\( z(\eta_1, \eta_2) = f(d(\eta_1, \eta_2)) \)</li>
+              <li><b>Arbre</b>: rien de nouveau: \({ z(\eta_1, \eta_2) = 2\operatorname{tmrca}(v_1, v_2) }\)</li>
+              <li><b>ARG</b>: généralisation possible?</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Électricité 101</h1>
+            <ol>
+              <li><b>Courrant (<i>Ampère</i>, \( \boldsymbol w \)):</b>
+                \( \# \) Électrons / seconde</li>
+              <li><b>Différence de potentiel (<i>Volt</i>, \( \boldsymbol v \)):</b>
+                \( \propto \) différence énergie potentielle entre deux points</li>
+            </ol>
+          </section>
+
+          <section>
+            <div class="r-stack">
+              <div class="fragment semi-fade-out" data-fragment-index="2">
+                <h1>Théorème de Thévenin</h1>
+                <div class="cols">
+                  <div class="col2">
+                    [Léon Charles Thévenin, 1883] <i>Tout circuit <em>linéaire</em> ne contenant que des sources de <em>voltage</em>/courant
+                      et des <em>impédances</em> est équivalent à une source de voltage en série avec une impédance.</i>
+                  </div>
+                  <div class="col2" style="flex: 20%;">
+                      <img src="assets/thevenin.webp"
+                           alt="Léon Charles Thévenin"
+                           style="display:block; margin:auto; max-height: 75%; border-radius: 50px;"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fragment fade-in obox" data-fragment-index="2" style="height: 80vh">
+                <h2>Équivalent de Thévenin</h2>
+                <div class="cols">
+                  <div class="col2" style="padding-right: 1em;">
+                    <img src="assets/thevenin1.webp"
+                         alt="Thévenin before."
+                         style="display:block; margin:auto; height: 500px"/>
+                  </div>
+                  <div class="col2" style="padding-left: 1em;">
+                    <img src="assets/thevenin2.webp"
+                         alt="Thévenin before."
+                         style="display:block; margin:auto; height: 500px"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="r-stack">
+              <div class="fragment semi-fade-out" data-fragment-index="2">
+                <h1>Espace des cycles</h1>
+                <ul>
+                  <li><b>Espaces des arrêtes</b>: \( \{ E \to \operatorname{GF}(2) \text{ linéaires} \} \)</li>
+                  <li>\( = \) <em>S-e des cycles (\( \mathcal C \))</em> \( \oplus \) S-e des coupes</li>
+                  <li class="column">ARG</li>
+                  <ul>
+                    <li>\( \dim \mathcal C(G) = \) # recombinaisons</li>
+                    <li><em>Base des cycles fondamentaux \( C \)</em> facile à calculer</li>
+                  </ul>
+                </ul>
+              </div>
+
+              <div class="fragment fade-in obox" data-fragment-index="2" style="height: 80vh">
+                <h2>Calcul des cycles fondamentaux </h2>
+                <img src="assets/fundamental.webp"
+                     alt="Fundamental basis."
+                     style="display:block; margin:auto; height: 85%"/>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>Trois lois</h1>
+            <div class="cols" style="text-align: center;">
+              <div class="col3">
+                <h2>Ohm</h2>
+
+                <img src="assets/ohm.jpg"
+                     alt="Ohm's law"
+                     style="display:block; margin:auto; height: 300px; border-radius: 50px"/>
+
+                $$ \boldsymbol v = \boldsymbol Z \boldsymbol w + \boldsymbol g$$
+              </div>
+              <div class="col3">
+                <h2>Kirchhoff (\( w \))</h2>
+
+                <img src="assets/kirchhoff_current.svg"
+                     alt="Kirchhoff's current law."
+                     style="display:block; margin:auto; height: 300px"/>
+
+                $$ \boldsymbol B \boldsymbol w = \boldsymbol 0 $$
+              </div>
+              <div class="col3">
+                <h2>Kirchhoff (\( v \))</h2>
+
+                <img src="assets/kirchhoff_voltage.svg"
+                     alt="Kirchhoff's voltage law."
+                     style="display:block; margin:auto; height: 300px"/>
+
+                $$ \boldsymbol C' \boldsymbol v = \boldsymbol 0 $$
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="r-stack">
+              <div class="fragment semi-fade-out" data-fragment-index="2">
+                <h1>Solution?</h1>
+                <ul>
+                  <li>\( \boldsymbol v \) fonction de \( \boldsymbol w \)</li>
+                  <li>\( \boldsymbol g \) contrôlé</li>
+                  <li>\( \boldsymbol Z, \boldsymbol B \) et \( \boldsymbol C \) connue</li>
+                  <li>Kirchhoff (\( w \)) \( \Rightarrow \) courant source \( w_S \) \( = \) courrant total</li>
+                  <li>Ohm \( \Rightarrow \) \( z_{\text{th}} = w_S^{-1} \)</li>
+                </ul>
+              </div>
+
+              <div class="fragment fade-in obox" data-fragment-index="2">
+                <h2>Solution!</h2>
+                $$ \boldsymbol w = \boldsymbol C \boldsymbol{\hat g} $$
+                où
+                $$ \boldsymbol{\hat g} = \argmin_{\boldsymbol g} || \boldsymbol Z^{-\frac 1 2} \boldsymbol g - \boldsymbol Z^{\frac 1 2} \boldsymbol C \boldsymbol g ||^2 $$
+                Simple problème de moindre carrés &#x1F92F;
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>Exemple: Clustering</h1>
+            <iframe src="assets/clusters.html" title="Clustering analysis" frameborder="0" scrolling="no"
+                    style="width: 600px; height: 400px; display: block; margin: auto; "></iframe>
+          </section>
         </section>
 
         <section id="references">
@@ -81,28 +438,32 @@
           </section>
           <section>
             <ol>
-              <li>Croucha, D. J. M., &#38; Bodmer, W. F. (2020). Polygenic inheritance, GWAS, polygenic risk scores, and the search for functional variants. <i>Proceedings of the National Academy of Sciences of the United States of America</i>, <i>117</i>(32), 18924–18933. <a href="https://doi.org/10.1073/pnas.2005634117">https://doi.org/10.1073/pnas.2005634117</a></li>
-              <li>Meuwissen, T. H. E., Hayes, B. J., &#38; Goddard, M. E. (2001). Prediction of Total Genetic Value Using Genome-Wide Dense Marker Maps. <i>Genetics</i>, <i>157</i>(4), 1819–1829. <a href="https://doi.org/10.1093/GENETICS/157.4.1819">https://doi.org/10.1093/GENETICS/157.4.1819</a></li>
+              <li>Kingman, J. F. C. (1982). The coalescent. <i>Stochastic Processes and Their Applications</i>, <i>13</i>(3), 235–248. <a href="https://doi.org/10.1016/0304-4149(82)90011-4">https://doi.org/10.1016/0304-4149(82)90011-4</a></li>
+              <li>Shannon, C.E. (1940). <i>A symbolic analysis of relay and switching circuits</i> [Mémoire de maîtrise, Massachusetts Institute of Technology]. DSpace@MIT. <a href="https://dspace.mit.edu/handle/1721.1/11173">https://dspace.mit.edu/handle/1721.1/11173</a></li>
+              <li>Duffin, R. J. (1965). Topology of series-parallel networks. <i>Journal of Mathematical Analysis and Applications</i>, <i>10</i>(2), 303–318. <a href="https://doi.org/10.1016/0022-247X(65)90125-3">https://doi.org/10.1016/0022-247X(65)90125-3</a></li>
+              <li>Bott, R., & Duffin, R. J. (1953). On the algebra of networks. <i>Transactions of the American Mathematical Society</i>, <i>74</i>(1), 99‑109. <a href="https://doi.org/10.1090/S0002-9947-1953-0056573-X">https://doi.org/10.1090/S0002-9947-1953-0056573-X</a></li>
+              <li>Korneyenko, N. M. (1994). Combinatorial algorithms on a class of graphs. <i>Discrete Applied Mathematics</i>, <i>54</i>(2), 215‑217. <a href="https://doi.org/10.1016/0166-218X(94)90022-1">https://doi.org/10.1016/0166-218X(94)90022-1</a></li>
             </ol>
           </section>
+
           <section>
-            <ol start = 3>
-              <li>Slatkin, M. (2008). Exchangeable models of complex inherited diseases. <i>Genetics</i>, <i>179</i>(4), 2253–2261. <a href="https://doi.org/10.1534/genetics.107.077719">https://doi.org/10.1534/genetics.107.077719</a></li>
-              <li>Visscher, P. M., &#38; Wray, N. R. (2016). Concepts and Misconceptions about the Polygenic Additive Model Applied to Disease. <i>Human Heredity</i>, <i>80</i>(4), 165–170. <a href="https://doi.org/10.1159/000446931">https://doi.org/10.1159/000446931</a></li>
+            <ol start="6">
+              <li>Wimer, T. V. & Hedetniemi, S. T. (1988). K-terminal recursive families of graphs. <i>Congressus Numerantium</i>, <i>63</i>, 161‑176.</li>
             </ol>
           </section>
+
         </section>
       </div>
     </div>
 
     <div id="logo"><p>
-        Author (Institution)
+        Patrick Fournier (UQAM)
         <span class="separator"></span>
-        Session
+        Journée de la recherche STATQAM
         <span class="separator"></span>
-        Event (Venue)
+        UQAM (Montréal)
         <span class="separator"></span>
-        Date
+        29 mai 2024
     </p></div>
 
     <div id="qrcode" alt="Slides"></div>
@@ -117,7 +478,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="dist/perso.js"></script>
-    <script type="text/javascript">qrcode.makeCode("www.patrickfournier.ca");</script>
+    <script type="text/javascript">qrcode.makeCode("www.patrickfournier.ca/statqam2024");</script>
     <script>
       // More info about initialization & config:
       // - https://revealjs.com/initialization/

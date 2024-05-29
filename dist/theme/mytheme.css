@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/**
- * Black theme for reveal.js.
- *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
- */
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
@@ -36,6 +31,8 @@
   --r-link-color-hover: #34ccff;
   --r-selection-background-color: #e7ad52;
   --r-selection-color: #fff;
+  --r-overlay-element-bg-color: 240, 240, 240;
+  --r-overlay-element-fg-color: 0, 0, 0;
 }
 
 .reveal-viewport {
@@ -364,8 +361,9 @@
 }
 
 em {
+  color: #9558b2;
   font-style: normal !important;
-  text-decoration: underline #9558b2 dashed 5px;
+  /* text-decoration: underline #9558b2 dashed 5px; */
 }
 
 i:not(.fas):not(.fa-circle) {
@@ -507,7 +505,11 @@ a:hover {
 /* Lists */
 ul, ol, dl {
   padding-left: 1em;
-  line-height: 3ex;
+  line-height: 2ex;
+}
+
+li {
+  margin: 1.25ex 0;
 }
 
 ul li::marker, ol li::marker, dl dt::marker {
@@ -647,91 +649,10 @@ p code, pre code.hljs {
   #logo {
     display: none;
   }
-
   #qrcode {
     width: 50px;
     height: 50px;
     top: 25px;
     right: 25px;
   }
-}
-.tree {
-  --branch-color: #e65100;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.tree li::marker {
-  content: none;
-}
-
-.tree ul {
-  position: relative;
-  padding-top: 20px;
-}
-
-.tree li {
-  list-style-type: none;
-  float: left;
-  text-align: center;
-  position: relative;
-  padding: 20px 5px 0 5px;
-}
-
-.tree li::before, .tree li::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 50%;
-  width: 50%;
-  height: 20px;
-  border-top: 5px solid var(--branch-color);
-}
-
-.tree li::after {
-  right: auto;
-  left: 50%;
-  border-left: 5px solid var(--branch-color);
-}
-
-.tree li:only-child::after,
-.tree li:only-child::before {
-  display: none;
-}
-
-.tree li:only-child {
-  padding-top: 0;
-}
-
-.tree li:first-child::before,
-.tree li:last-child::after {
-  border: 0 none;
-}
-
-.tree li:last-child::before {
-  border-right: 5px solid var(--branch-color);
-  border-radius: 0 5px 0 0;
-}
-
-.tree li:first-child::after {
-  border-radius: 5px 0 0 0;
-}
-
-.tree ul ul {
-  margin: 0;
-}
-
-.tree ul ul::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 0;
-  height: 20px;
-  border-left: 5px solid var(--branch-color);
-}
-
-.tree li .vertex {
-  padding: 5px 10px;
-  display: inline-block;
 }

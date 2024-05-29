@@ -43,7 +43,7 @@
           <section>
             <h1>Avertissement/garantie</h1>
             <ul>
-              <li><em>Pas</em> question d'implémentation: désolé/bienvenu</li>
+              <li><em>Pas</em> question d'implémentation: désolé/bienvenue</li>
               <li>\( \searrow \) génétique, \( \nearrow \) graphes</li>
               <li>&#171;Famille&#187;: échelle \( \sim \) 1000 générations</li>
               <li>Histoire évolutive supposée connue</li>
@@ -152,11 +152,11 @@
           </section>
 
           <section>
-            <h1>Graphe de recombinaison ancestral</h1>
+            <h1>Graphe de recombinaison ancestral (ARG)</h1>
             <div class="cols">
               <div class="col2" style="margin-top: -1em;">
                 <ul>
-                  <li>Union d'arbres \( \Leftrightarrow \) graphe</li>
+                  <li>Union d'arbres \( \Rightarrow \) graphe</li>
                   <li>Règle le problème conceptuel</li>
                   <li class="column">Distance</li>
                   <ul>
@@ -221,7 +221,7 @@
           <section>
             <div style="display: flex; flex-direction: column; row-gap: 3em;">
               <div>
-                <h1>Proposition (ARG \( \Leftrightarrow \) GSP)</h1>
+                <h1>Proposition (ARG \( \Rightarrow \) GSP)</h1>
                 <i>Tout graphe de recombinaison ancestral est un graphe série-parallèle généralisé.</i>
               </div>
               <div class="cols" style="font-size: 75%; text-align: center">
@@ -275,9 +275,9 @@
               <div class="col2">
                 <ul>
                   <li>Terme inventé par Oliver Heaviside (juillet 1886)</li>
-                  <li>Électricité: généralise <em>résistance</em> (\( r \)) au AC</li>
+                  <li>Électricité: généralise <em>résistance (\( r \))</em> au AC</li>
                   <li>En général, opposition d'un système à une excitation</li>
-                  <li>\( z \in \mathbb C \), <em>\( \Re(z) = r \)</em>, \( \Im(z) = \) réactance</li>
+                  <li>\( \mathbb C \ni z = r + x \jmath\)</li>
                 </ul>
 
               </div>
@@ -296,17 +296,22 @@
               <li><b>Généalogie</b>: résiste à la propagation</li>
               <li>\( z(\eta_1, \eta_2) = f(d(\eta_1, \eta_2)) \)</li>
               <li><b>Arbre</b>: rien de nouveau: \({ z(\eta_1, \eta_2) = 2\operatorname{tmrca}(v_1, v_2) }\)</li>
-              <li><b>ARG</b>: généralisation possible?</li>
+              <li class="questionmark"><b>ARG</b>: généralisation possible</li>
             </ul>
           </section>
 
           <section>
             <h1>Électricité 101</h1>
             <ol>
-              <li><b>Courrant (<i>Ampère</i>, \( \boldsymbol w \)):</b>
-                \( \# \) Électrons / seconde</li>
+              <li><b>Courant (<i>Ampère</i>, \( \boldsymbol w \)):</b>
+                \( \# \) électrons / seconde</li>
               <li><b>Différence de potentiel (<i>Volt</i>, \( \boldsymbol v \)):</b>
                 \( \propto \) différence énergie potentielle entre deux points</li>
+              <li><b>Impédance (<i>Ohm</i>, \( \boldsymbol Z \)):</b> Constante de proportionalité entre \( \boldsymbol v\) et \( \boldsymbol w \)</li>
+              <ul>
+                <li>\( \Re(z) = \) <em>résistance</em> (chaleur)</li>
+                <li>\( \Im(z) = \) réactance (phase)</li>
+              </ul>
             </ol>
           </section>
 
@@ -417,16 +422,16 @@
 
               <div class="fragment fade-in obox" data-fragment-index="2">
                 <h2>Solution!</h2>
-                $$ \boldsymbol w = \boldsymbol C \boldsymbol{\hat g} $$
+                $$ \boldsymbol w = \boldsymbol C \boldsymbol{\hat\beta} $$
                 où
-                $$ \boldsymbol{\hat g} = \argmin_{\boldsymbol g} || \boldsymbol Z^{-\frac 1 2} \boldsymbol g - \boldsymbol Z^{\frac 1 2} \boldsymbol C \boldsymbol g ||^2 $$
+                $$ \boldsymbol{\hat \beta} = \argmin_{\boldsymbol \beta} || \boldsymbol Z^{-\frac 1 2} \boldsymbol g - \boldsymbol Z^{\frac 1 2} \boldsymbol C \boldsymbol \beta ||^2 $$
                 Simple problème de moindre carrés &#x1F92F;
               </div>
             </div>
           </section>
 
           <section>
-            <h1>Exemple: Clustering</h1>
+            <h1>Application: Clustering</h1>
             <iframe src="assets/clusters.html" title="Clustering analysis" frameborder="0" scrolling="no"
                     style="width: 600px; height: 400px; display: block; margin: auto; "></iframe>
           </section>

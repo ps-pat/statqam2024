@@ -9,7 +9,7 @@
    stroke-width="28.222"
    stroke-linejoin="round"
    xml:space="preserve"
-   id="svg73"
+   id="svg71"
    sodipodi:docname="sp_rec.svg"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -17,7 +17,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:ooo="http://xml.openoffice.org/svg/export"><sodipodi:namedview
-   id="namedview73"
+   id="namedview71"
    pagecolor="#ffffff"
    bordercolor="#000000"
    borderopacity="0.25"
@@ -26,15 +26,15 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
    inkscape:document-units="mm"
-   inkscape:zoom="0.70908333"
-   inkscape:cx="217.88694"
-   inkscape:cy="369.49113"
+   inkscape:zoom="4.2545"
+   inkscape:cx="183.10025"
+   inkscape:cy="85.55647"
    inkscape:window-width="1920"
    inkscape:window-height="1008"
    inkscape:window-x="0"
    inkscape:window-y="0"
    inkscape:window-maximized="1"
-   inkscape:current-layer="svg73" />
+   inkscape:current-layer="svg71" />
  <defs
    class="ClipPathGroup"
    id="defs2">
@@ -45,7 +45,7 @@
    x="0"
    y="0"
    width="30000"
-   height="30000"
+   height="40000"
    id="rect1" />
   </clipPath>
   <clipPath
@@ -53,9 +53,9 @@
    clipPathUnits="userSpaceOnUse">
    <rect
    x="30"
-   y="30"
+   y="40"
    width="29940"
-   height="29940"
+   height="39920"
    id="rect2" />
   </clipPath>
  </defs>
@@ -196,10 +196,10 @@
  </g>
  <g
    class="SlideGroup"
-   id="g73"
+   id="g71"
    transform="translate(-9215,-5215)">
   <g
-   id="g72">
+   id="g70">
    <g
    id="container-id1">
     <g
@@ -208,7 +208,7 @@
    clip-path="url(#presentation_clip_path)">
      <g
    class="Page"
-   id="g71">
+   id="g69">
       <g
    class="com.sun.star.drawing.ConnectorShape"
    id="g15">
@@ -242,9 +242,9 @@
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="10215"
+   x="10214"
    y="5715"
-   width="322"
+   width="323"
    height="322"
    id="rect15" />
         <path
@@ -271,9 +271,9 @@
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="10215"
+   x="10214"
    y="6965"
-   width="322"
+   width="323"
    height="322"
    id="rect17" />
         <path
@@ -382,10 +382,10 @@
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="11251"
+   x="11227"
    y="5727"
-   width="1504"
-   height="1027"
+   width="1552"
+   height="1051"
    id="rect24" />
         <defs
    id="defs26">
@@ -431,6 +431,8 @@
         <path
    fill="none"
    stroke="#35a7ff"
+   stroke-width="50"
+   stroke-linejoin="round"
    d="m 11252,6376 h 1125 v -125 l 376,250 -376,251 v -126 h -1125 z"
    id="path27" />
         <text
@@ -523,9 +525,9 @@
    stroke="none"
    fill="none"
    x="9215"
-   y="6964"
+   y="6965"
    width="322"
-   height="323"
+   height="322"
    id="rect33" />
         <path
    fill="#e65100"
@@ -575,9 +577,9 @@
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="9714"
+   x="9715"
    y="5715"
-   width="323"
+   width="322"
    height="322"
    id="rect36" />
         <path
@@ -604,10 +606,10 @@
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="9714"
-   y="6964"
-   width="323"
-   height="323"
+   x="9715"
+   y="6965"
+   width="322"
+   height="322"
    id="rect38" />
         <path
    fill="#e65100"
@@ -739,9 +741,9 @@
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="12966"
+   x="12967"
    y="6464"
-   width="323"
+   width="322"
    height="323"
    id="rect46" />
         <path
@@ -787,10 +789,10 @@
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="13464"
-   y="7715"
-   width="323"
-   height="322"
+   x="13465"
+   y="7714"
+   width="322"
+   height="323"
    id="rect48" />
         <path
    fill="#e65100"
@@ -840,9 +842,9 @@
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="13464"
+   x="13465"
    y="5215"
-   width="323"
+   width="322"
    height="322"
    id="rect51" />
         <path
@@ -869,9 +871,9 @@
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="13464"
+   x="13465"
    y="6464"
-   width="323"
+   width="322"
    height="323"
    id="rect53" />
         <path
@@ -886,17 +888,17 @@
       </g>
       <g
    class="com.sun.star.drawing.CustomShape"
-   id="g61">
+   id="g59">
        <g
    id="id26">
         <rect
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="13999"
-   y="5726"
-   width="1504"
-   height="1027"
+   x="13975"
+   y="5759"
+   width="1552"
+   height="1018"
    id="rect54" />
         <defs
    id="defs56">
@@ -942,38 +944,31 @@
         <path
    fill="none"
    stroke="#35a7ff"
+   stroke-width="50"
+   stroke-linejoin="round"
    d="m 14000,6375 h 1125 v -125 l 376,250 -376,251 v -126 h -1125 z"
    id="path57" />
         <text
    class="SVGTextShape"
-   id="text61"><tspan
+   id="text59"><tspan
      class="TextParagraph"
      font-family="'Liberation Sans', sans-serif"
-     font-size="409px"
+     font-size="706px"
      font-weight="400"
-     id="tspan61"><tspan
+     id="tspan59"><tspan
        class="TextPosition"
-       x="14306"
+       x="14421"
        y="6245"
        id="tspan58"><tspan
-         font-size="706px"
          fill="#35a7ff"
          stroke="none"
          style="white-space:pre"
-         id="tspan57">P</tspan></tspan><tspan
-       class="TextPosition"
-       x="14777"
-       y="6013"
-       id="tspan60"><tspan
-         fill="#35a7ff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan59">2</tspan></tspan></tspan></text>
+         id="tspan57">P</tspan></tspan></tspan></text>
        </g>
       </g>
       <g
    class="com.sun.star.drawing.ConnectorShape"
-   id="g62">
+   id="g60">
        <g
    id="id27">
         <rect
@@ -984,7 +979,7 @@
    y="6725"
    width="551"
    height="1051"
-   id="rect61" />
+   id="rect59" />
         <path
    fill="none"
    stroke="#22221c"
@@ -992,12 +987,12 @@
    stroke-linejoin="round"
    stroke-linecap="round"
    d="M 16375,7750 15875,6750"
-   id="path61" />
+   id="path59" />
        </g>
       </g>
       <g
    class="com.sun.star.drawing.ConnectorShape"
-   id="g63">
+   id="g61">
        <g
    id="id28">
         <rect
@@ -1008,7 +1003,7 @@
    y="5475"
    width="551"
    height="1051"
-   id="rect62" />
+   id="rect60" />
         <path
    fill="none"
    stroke="#22221c"
@@ -1016,12 +1011,12 @@
    stroke-linejoin="round"
    stroke-linecap="round"
    d="m 15875,6500 500,-1000"
-   id="path62" />
+   id="path60" />
        </g>
       </g>
       <g
    class="com.sun.star.drawing.ConnectorShape"
-   id="g64">
+   id="g62">
        <g
    id="id29">
         <rect
@@ -1032,7 +1027,7 @@
    y="6725"
    width="551"
    height="1051"
-   id="rect63" />
+   id="rect61" />
         <path
    fill="none"
    stroke="#22221c"
@@ -1040,12 +1035,12 @@
    stroke-linejoin="round"
    stroke-linecap="round"
    d="m 16375,7750 500,-1000"
-   id="path63" />
+   id="path61" />
        </g>
       </g>
       <g
    class="com.sun.star.drawing.ConnectorShape"
-   id="g65">
+   id="g63">
        <g
    id="id30">
         <rect
@@ -1056,7 +1051,7 @@
    y="5475"
    width="551"
    height="1051"
-   id="rect64" />
+   id="rect62" />
         <path
    fill="none"
    stroke="#22221c"
@@ -1064,6 +1059,35 @@
    stroke-linejoin="round"
    stroke-linecap="round"
    d="M 16875,6500 16375,5500"
+   id="path62" />
+       </g>
+      </g>
+      <g
+   class="com.sun.star.drawing.CustomShape"
+   id="g64">
+       <g
+   id="id31">
+        <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="16215"
+   y="7714"
+   width="322"
+   height="323"
+   id="rect63" />
+        <path
+   fill="#e65100"
+   stroke="none"
+   d="m 16501,7875 c 0,23 -6,44 -17,63 -11,19 -27,35 -46,46 -19,11 -40,17 -62,17 -23,0 -44,-6 -63,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-63 0,-22 6,-43 17,-62 11,-19 27,-35 46,-46 19,-11 40,-17 63,-17 22,0 43,6 62,17 19,11 35,27 46,46 11,19 17,40 17,62 z"
+   id="path63" />
+        <path
+   fill="none"
+   stroke="#e65100"
+   stroke-width="70"
+   stroke-linejoin="round"
+   stroke-linecap="round"
+   d="m 16501,7875 c 0,23 -6,44 -17,63 -11,19 -27,35 -46,46 -19,11 -40,17 -62,17 -23,0 -44,-6 -63,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-63 0,-22 6,-43 17,-62 11,-19 27,-35 46,-46 19,-11 40,-17 63,-17 22,0 43,6 62,17 19,11 35,27 46,46 11,19 17,40 17,62 z"
    id="path64" />
        </g>
       </g>
@@ -1071,20 +1095,20 @@
    class="com.sun.star.drawing.CustomShape"
    id="g66">
        <g
-   id="id31">
+   id="id32">
         <rect
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="16214"
-   y="7715"
-   width="323"
+   x="16215"
+   y="5215"
+   width="322"
    height="322"
-   id="rect65" />
+   id="rect64" />
         <path
    fill="#e65100"
    stroke="none"
-   d="m 16501,7875 c 0,23 -6,44 -17,63 -11,19 -27,35 -46,46 -19,11 -40,17 -62,17 -23,0 -44,-6 -63,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-63 0,-22 6,-43 17,-62 11,-19 27,-35 46,-46 19,-11 40,-17 63,-17 22,0 43,6 62,17 19,11 35,27 46,46 11,19 17,40 17,62 z"
+   d="m 16501,5376 c 0,22 -6,43 -17,62 -11,19 -27,35 -46,46 -19,11 -40,17 -62,17 -23,0 -44,-6 -63,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-62 0,-23 6,-44 17,-63 11,-19 27,-35 46,-46 19,-11 40,-17 63,-17 22,0 43,6 62,17 19,11 35,27 46,46 11,19 17,40 17,63 z"
    id="path65" />
         <path
    fill="none"
@@ -1092,42 +1116,13 @@
    stroke-width="70"
    stroke-linejoin="round"
    stroke-linecap="round"
-   d="m 16501,7875 c 0,23 -6,44 -17,63 -11,19 -27,35 -46,46 -19,11 -40,17 -62,17 -23,0 -44,-6 -63,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-63 0,-22 6,-43 17,-62 11,-19 27,-35 46,-46 19,-11 40,-17 63,-17 22,0 43,6 62,17 19,11 35,27 46,46 11,19 17,40 17,62 z"
+   d="m 16501,5376 c 0,22 -6,43 -17,62 -11,19 -27,35 -46,46 -19,11 -40,17 -62,17 -23,0 -44,-6 -63,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-62 0,-23 6,-44 17,-63 11,-19 27,-35 46,-46 19,-11 40,-17 63,-17 22,0 43,6 62,17 19,11 35,27 46,46 11,19 17,40 17,63 z"
    id="path66" />
        </g>
       </g>
       <g
    class="com.sun.star.drawing.CustomShape"
-   id="g68">
-       <g
-   id="id32">
-        <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="16214"
-   y="5215"
-   width="323"
-   height="322"
-   id="rect66" />
-        <path
-   fill="#e65100"
-   stroke="none"
-   d="m 16501,5376 c 0,22 -6,43 -17,62 -11,19 -27,35 -46,46 -19,11 -40,17 -62,17 -23,0 -44,-6 -63,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-62 0,-23 6,-44 17,-63 11,-19 27,-35 46,-46 19,-11 40,-17 63,-17 22,0 43,6 62,17 19,11 35,27 46,46 11,19 17,40 17,63 z"
-   id="path67" />
-        <path
-   fill="none"
-   stroke="#e65100"
-   stroke-width="70"
-   stroke-linejoin="round"
-   stroke-linecap="round"
-   d="m 16501,5376 c 0,22 -6,43 -17,62 -11,19 -27,35 -46,46 -19,11 -40,17 -62,17 -23,0 -44,-6 -63,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-62 0,-23 6,-44 17,-63 11,-19 27,-35 46,-46 19,-11 40,-17 63,-17 22,0 43,6 62,17 19,11 35,27 46,46 11,19 17,40 17,63 z"
-   id="path68" />
-       </g>
-      </g>
-      <g
-   class="com.sun.star.drawing.CustomShape"
-   id="g69">
+   id="g67">
        <g
    id="id33">
         <rect
@@ -1135,10 +1130,10 @@
    stroke="none"
    fill="none"
    x="15714"
-   y="6465"
+   y="6464"
    width="323"
-   height="322"
-   id="rect68" />
+   height="323"
+   id="rect66" />
         <path
    fill="none"
    stroke="#e65100"
@@ -1146,12 +1141,12 @@
    stroke-linejoin="round"
    stroke-linecap="round"
    d="m 16001,6625 c 0,23 -6,44 -17,63 -11,19 -27,35 -46,46 -19,11 -40,17 -63,17 -22,0 -43,-6 -62,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-63 0,-22 6,-43 17,-62 11,-19 27,-35 46,-46 19,-11 40,-17 62,-17 23,0 44,6 63,17 19,11 35,27 46,46 11,19 17,40 17,62 z"
-   id="path69" />
+   id="path67" />
        </g>
       </g>
       <g
    class="com.sun.star.drawing.CustomShape"
-   id="g70">
+   id="g68">
        <g
    id="id34">
         <rect
@@ -1159,10 +1154,10 @@
    stroke="none"
    fill="none"
    x="16714"
-   y="6465"
+   y="6464"
    width="323"
-   height="322"
-   id="rect69" />
+   height="323"
+   id="rect67" />
         <path
    fill="none"
    stroke="#e65100"
@@ -1170,7 +1165,7 @@
    stroke-linejoin="round"
    stroke-linecap="round"
    d="m 17001,6625 c 0,23 -6,44 -17,63 -11,19 -27,35 -46,46 -19,11 -40,17 -63,17 -22,0 -43,-6 -62,-17 -19,-11 -35,-27 -46,-46 -11,-19 -17,-40 -17,-63 0,-22 6,-43 17,-62 11,-19 27,-35 46,-46 19,-11 40,-17 62,-17 23,0 44,6 63,17 19,11 35,27 46,46 11,19 17,40 17,62 z"
-   id="path70" />
+   id="path68" />
        </g>
       </g>
      </g>
